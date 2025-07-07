@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1 class="title">Todo List</h1>
+        <form action="/" method="post">
+            <input type="text" name="task">
+            <button type="submit">+</button>
+        </form>
+        <div class="tasks">
+            <ul>
+                <% for(var i=0;i<task.length;i++){ %>
+                    <div class="single">
+                        <input type="checkbox" class="<%=task[i]%>" value="<%=task[i]%>" onclick="clicked(this)">
+                        <li class="<%= task[i]%>">
+                            <%= task[i]%>
+                        </li>
+                    </div>
+                    <% } %>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
